@@ -4,3 +4,6 @@
 .env
 id_*
 *.pem
+*.key
+.ssh/
+.gnupg/
