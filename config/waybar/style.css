@@ -2,14 +2,15 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font";
+    font-family: "JetBrainsMono Nerd Font Propo", "JetBrainsMono Nerd Font", "Symbols Nerd Font", sans-serif;
     font-size: 13px;
     min-height: 0;
 }
 
 /* The Main Bar */
 window#waybar {
-    background: rgba(56, 60, 74, 0.9); /* Subtle transparency */
+    background: rgba(50, 50, 50, 0.9); /* Subtle transparency */
+    /*background: rgba(56, 60, 74, 0.9);  Subtle transparency */
     color: #ffffff;
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }

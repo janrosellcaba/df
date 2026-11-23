@@ -25,15 +25,16 @@ bindkey "^[[1;5D" backward-word                 # Ctrl+LeftArrow
 PROMPT='%F{green}%n@%m%f:%F{blue}%~%f$ '
 
 alias cl='clear'
+alias rb='sudo reboot'
+alias sd='sudo shutdown now'
 alias v='nvim'
-alias cde='cd /home/jan/emh'
-alias cdm='cd /home/jan/emh/emh-mvp'
-alias cdM='cd /home/jan/emh/MVP'
-alias cdw='cd /home/jan/emh/emh-web'
-alias cdr='cd /home/jan/emh/emh-reports'
-alias cdo='cd /home/jan/personal/webOps-bcn'
+alias cde='cd /home/jan/code/emh'
+alias cdm='cd /home/jan/code/emh/mvp'
+alias cdw='cd /home/jan/code/emh/emh-web'
+alias cdr='cd /home/jan/code/emh/emh-reports'
 alias cdu='cd /home/jan/uni'
-alias c='code .'
+#alias c='code .'
+alias c='cursor .'
 alias a='antigravity-ide .'
 alias funcy='ssh emh@100.101.180.93'
 alias mcp='ssh emh@100.126.79.70'
@@ -41,24 +42,19 @@ alias fl='ssh emh@192.168.1.100'
 alias upgrade='topgrade --cleanup'
 alias sz='source ~/.config/zsh/.zshrc'
 alias vz='nvim ~/.config/zsh/.zshrc'
+alias vh='nvim ~/.config/hypr/hyprland.lua'
 alias cv='ssh emh@100.105.33.70'
 alias cvr='ssh root@100.105.33.70'
 
-#
-# relax
-#
-alias matrix='cmatrix'
-alias aquarium='asciiquarium'
-alias bonsai='cbonsai'
-alias pipes='pipes.sh'
-alias train='sl'
+alias ion="ssh jan@100.116.83.58"
+alias ionr="ssh root@100.116.83.58"
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
    eval "$(ssh-agent -s)" > /dev/null
 fi
 ssh-add ~/.ssh/id_ed25519 2>/dev/null
 
-fastfetch
+#fastfetch
 export PATH=~/.npm-global/bin:$PATH
 # Gnome Keyring setup
 if [ -n "$DESKTOP_SESSION" ]; then
@@ -69,9 +65,12 @@ fi
 export JAVA_HOME=/usr/lib/jvm/default
 export PATH=$JAVA_HOME/bin:$PATH
 
-. "$HOME/.local/share/../bin/env"
+#. "$HOME/.local/share/../bin/env"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
 # bun completions
 [ -s "/home/jan/.bun/_bun" ] && source "/home/jan/.bun/_bun"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+alias dfu='~/df/scripts/update.sh'

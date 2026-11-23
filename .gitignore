@@ -1,2 +1,6 @@
-# Ignore local/temporary build files or secrets
+.zcompdump*
+*.zwc
 *.log
+.env
+id_*
+*.pem

@@ -1,0 +1,7 @@
+{
+    "window.autoDetectColorScheme": true,
+    "workbench.editor.wrapTabs": true,
+    "cursor.composer.queueMessageDefaultBehavior": "steer",
+    "claudeCode.hideOnboarding": true,
+    "claudeCode.preferredLocation": "panel"
+}

@@ -1,0 +1,7 @@
+[user]
+	name = jan rosell
+	email = janrosellcaba@gmail.com
+[credential "https://api.timbal.ai"]
+	useHttpPath = false
+	helper = 
+	helper = !timbal credential-helper
