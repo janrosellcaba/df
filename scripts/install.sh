@@ -18,7 +18,7 @@ if ((DRY)); then echo "[dry] cp wallpapers/1.jpg ~/img/wallpapers/"
 else mkdir -p ~/img/wallpapers && cp -n "$DF/wallpapers/1.jpg" ~/img/wallpapers/; fi
 
 say "ZDOTDIR"
-if ((DRY)); then echo "[dry] create ~/.zshenv if it doesn't exists"
+if ((DRY)); then echo "[dry] create ~/.zshenv if it doesn't exist"
 elif [ ! -e ~/.zshenv ]; then echo 'export ZDOTDIR="$HOME/.config/zsh"' > ~/.zshenv; fi
 
 say "config (stow)"

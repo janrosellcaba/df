@@ -12,7 +12,7 @@ cp -u ~/img/wallpapers/1.jpg wallpapers/1.jpg
 git add -A
 
 # safety: look for secrets in the new lines
-if git diff --cached -U0 | grep -E '^\+' | grep -i -E 'api[_-]?key|secret|passw|BEGIN [A-Z ]*PRIVATE KEY|ghp_|sk-[A-Za-z0-9]{20}'; then
+if git diff --cached -U0 -- . ':!scripts/update.sh' | grep -E '^\+' | grep -i -E 'api[_-]?key|secret|passw|BEGIN [A-Z ]*PRIVATE KEY|ghp_|sk-[A-Za-z0-9]{20}'; then
   echo "WARNING: possible secret in the lines above."
   read -rp "continue anyway? [y/N] " a
   [[ "$a" == "y" ]] || { git reset -q; echo "aborted."; exit 1; }
